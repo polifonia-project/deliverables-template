@@ -6,11 +6,15 @@
 
 \newcommand{\DelTitle}{Title of this deliverable}
 \newcommand{\DelNumber}{DX.X}
-\newcommand{\DelVersion}{0.X/1.0}
-\newcommand{\footertext}{\raisebox{3mm}{Deliverable \DelNumber}}
-\setlength{\footheight}{36pt}
-\newcommand{\footerlogo}{\raisebox{3mm}{\leavevmode\includegraphics[width=2cm]{SINet}}}
-\clearscrheadfoot
+\newcommand{\DelVersion}{V0.1}
+% \newcommand{\footertext}{\raisebox{3mm}{Deliverable \DelNumber}}
+% \setlength{\footheight}{0pt}
+% \newcommand{\footerlogo}{\raisebox{3mm}{\leavevmode\includegraphics[width=2cm]{polifonia}}}
+% \clearscrheadfoot
+\newcommand{\headertext}{{Deliverable \DelNumber \DelTitle}}
+\newcommand{\headerversion}{{\DelVersion \today}}
+\newcommand{\headerlogo}{{\leavevmode\includegraphics[width=2cm]{polifonia}}}
+% \clearscrheadfoot
 \pagestyle{empty}
 
 
@@ -25,30 +29,46 @@
 \newcolumntype{C}{ >{\centering\arraybackslash} m{4cm} }
 
 \begin{center}
-Horizon 2020
-\vspace{2cm}
-
-  \begin{center}
-
-
-  % H2020 has no logo and no visual identity
-
-  \includegraphics[width=0.7\textwidth]{images/SINet}
+  \includegraphics[width=0.3\textwidth]{images/polifonia}
   \vspace{2mm}
-
-  \end{center}
+  
   \vspace{1cm}
-  {\Large Project title: Software-defined Intermittent Networking\\}
+  {\Large \textit{Polifonia: a digital harmoniser for musical heritage knowledge, H2020}\\}
   \vspace{2cm}
   
   \begin{spacing}{2.5}
-    \textbf{\Huge \DelTitle}\\\vspace{10mm}
-    \textbf{\Large Deliverable number: \DelNumber} \\\vspace{10mm} 
-    {\large Version \DelVersion}
+    \textbf{\Large \DelNumber: \DelTitle \, (\DelVersion)}\\\vspace{10mm}
   \end{spacing}
-  
-  \vspace*{\fill}
+\end{center}
 
+
+% Deliverable information table
+\begin{tabular}{|l|p{125mm}|}\hline
+  \multicolumn{2}{|c|}{\textbf{Deliverable information}}\\\hline
+    WP & WP1 Pilots and Web portal\\\hline
+    Deliverable dissemination level& PU Public\\\hline
+    Deliverable type& R Document, report \\\hline
+    Lead beneficiary& CNRS-IReMus \\\hline
+    Contributors& CNRS-IReMus \\\hline
+    Document status& Draft (Univer review, Final) \\\hline
+    Document version& \DelVersion \\\hline
+  Date& \today \\\hline
+  Authors&
+  \begin{tabular}[t]{l}
+    XXX - YYY, Institution \\
+    XXX - YYY, Institution \\
+    XXX - YYY, Institution \\
+    XXX - YYY, Institution \\
+  \end{tabular}\\\hline
+  Peer review&
+  \begin{tabular}[t]{l}
+  ZZZ - Institution\\
+\end{tabular}\\\hline
+\end{tabular}
+  
+\vspace*{\fill}
+
+\begin{center}
   %just to avoid warning :)
   \newcommand\undefcolumntype[1]{\expandafter\let\csname NC@find@#1\endcsname\relax}
   \newcommand\forcenewcolumntype[1]{\undefcolumntype{#1}\newcolumntype{#1}}
@@ -58,8 +78,8 @@ Horizon 2020
   \begin{tabular}{C@{\hspace*{0cm}}l}
     \includegraphics[scale=0.2]{images/logos/EU_Flag_320_213} &
     \begin{tabular}{l}
-    {Funded by the European Union’s Horizon 2020 research and innovation programme}\\
-    {under the Marie Sklodowska-Curie Grant Agreement No. 699924}\\
+    \textit{This project has received funding from the European Union’s Horizon 2020}\\
+    \textit{research and innovation programme under grant agreement No 101004746}\\
     \end{tabular}
   \end{tabular}
 \end{center}
@@ -69,63 +89,179 @@ Horizon 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Second Page 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\headheight}{1cm}
-\setlength{\footskip}{18mm}
-\addtolength{\textheight}{-\footskip}
-\pagestyle{empty}
+% \newgeometry{top=10.5cm, bottom=10.5cm}
+\thispagestyle{empty}
+\begin{center}
 
-\begin{flushleft}
-  \begin{tabular}{ll}
-    \textbf{Project Acronym:}       &   SINet \\
-    \textbf{Project Full Title:}    &   Software-defined Intermittent Networking  \\
-    \textbf{Call:}                  &   H2020-MSCA-IF-2015 \\ 
-%    \textbf{Topic:}                 &   ICT-10-2015 \\
-%    \textbf{Type of Action:}        &   RIA \\
-    \textbf{Grant Number:}          &   699924 \\
-    \textbf{Project URL:}           &  \url{http://sinet.dpalma.eu} 
-  \end{tabular}
+\vspace*{\fill}
+
+{\Large{PAGE INTENTIONALLY BLANK}}
+
+\vspace*{\fill}
 
 
-
-% define "struts", as suggested by Claudio Beccari in
-%    a piece in TeX and TUG News, Vol. 2, 1993.
-\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
-\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
-
-  \begin{tabular}{|l|p{125mm}|}\hline
-    \Tstrut\Bstrut Editor:& XXX, XXX-Institution\\\hline
-    \Tstrut\Bstrut Deliverable nature:& Report (R) \\\hline
-    \Tstrut\Bstrut Dissemination level:& Public (PU)\\\hline
-    \Tstrut\Bstrut Contractual Delivery Date:& XXX\\\hline
-    \Tstrut\Bstrut Actual Delivery Date& XXX\\\hline
-    % \Tstrut\Bstrut Suggested Readers:&Project partners, future community-lab.net users\\\hline
-    \Tstrut\Bstrut Number of pages:&\pageref{finalpg}\\\hline
-    \Tstrut\Bstrut Keywords:& XXX \\\hline
-    \Tstrut Authors:&
-    \begin{tabular}[t]{l}
-      XXX - YYY, Institution \\
-      XXX - YYY, Institution \\
-      XXX - YYY, Institution \\
-      XXX - YYY, Institution \Bstrut \\
-    \end{tabular}\\\hline
-    \Tstrut\Bstrut Peer review: &
-    \begin{tabular}[t]{l}
-		ZZZ - Institution\\
-	\end{tabular}\\\hline
-  \end{tabular}
-\end{flushleft}
-
-\section*{Abstract}
-Provide a short description, highlight the topics considered in the deliverable.
-
-The abstract must be self-contained, without abbreviations, footnotes, or references. It should be a microcosm of the full deliverable.
-
-The abstract must be between 150-250 words. Be sure that you adhere to these limits.
-
-The abstract must be written as one paragraph, and should not contain displayed mathematical equations or tabular material.
-
-The abstract should include three or four different keywords or phrases, as this will help readers to find it. It is important to avoid over-repetition of such phrases as this can result in a page being rejected by search engines.
-
-Ensure that your abstract reads well and is grammatically correct.
+\end{center}
+% \restoregeometry
 \clearpage
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Third Page 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setlength{\headheight}{1cm}
+% \setlength{\footskip}{18mm}
+% \addtolength{\textheight}{-\footskip}
+\pagestyle{empty}
+
+
+\section*{Project Information}
+
+% Project Metadata 
+\begin{flushleft}
+    \begin{tabular}{ll}
+      \textbf{Project Start Date:}    &   1st January 2021\\
+      \textbf{Project Duration:}    &   40 months\\
+      \textbf{Project Website:}    &   \url{https://polifonia-project.eu}\\
+  %     \textbf{Project Acronym:}       &   SINet \\
+  %     \textbf{Project Full Title:}    &   Software-defined Intermittent Networking  \\
+  %     \textbf{Call:}                  &   H2020-MSCA-IF-2015 \\ 
+  % %    \textbf{Topic:}                 &   ICT-10-2015 \\
+  % %    \textbf{Type of Action:}        &   RIA \\
+  %     \textbf{Grant Number:}          &   699924 \\
+  %     \textbf{Project URL:}           &  \url{http://sinet.dpalma.eu} 
+    \end{tabular}
+
+  \end{flushleft}
+
+\subsection*{Project Contacts}
+
+\begin{tabular}{p{6cm}@{\hskip 2cm}p{6cm}}
+  \raggedright
+  \textbf{Project Coordinator}\\
+  \vspace{0.5cm}
+  \textbf{Valentina Presutti}\\
+  \vspace{0.5cm}
+  ALMA MATER STUDIORUM - UNIVERSIT\`A DI BOLOGNA\\
+  Department of Language, Literature and Modern Cultures (LILEC)\\
+  \vspace{0.5cm}
+  E-mail: \textcolor{blue}{\href{mailto:valentina.presutti@unibo.it}{valentina.presutti@unibo.it}}   &
+  \raggedright
+  \textbf{Project Manager}\\
+  \vspace{0.5cm}
+  \textbf{Marta Clementi}\\
+  \vspace{0.5cm}
+  ALMA MATER STUDIORUM - UNIVERSIT\`A DI BOLOGNA\\
+  Research division\\
+  \vspace{0.5cm}
+  E-mail: \textcolor{blue}{\href{mailto:marta.clementi3@unibo.it}{marta.clementi3@unibo.it}}
+\end{tabular}
+
+  
+% \begin{minipage}
+%   \textbf{Project Coordinator}\\
+%   \vfill{0.5cm}
+%   \textbf{Valentina Presutti}\\
+%   \vfill{0.5cm}
+%   ALMA MATER STUDIORUM - UNIVERSIT\`A DI BOLOGNA\\
+%   Department of Language, Literature and Modern Cultures (LILEC)\\
+%   \vfill{0.5cm}
+%   E-mail: \textcolor{blue}{\href{mailto:valentina.presutti@unibo.it}{valentina.presutti@unibo.it}}
+% \end{minipage}
+% \hfill
+% \begin{minipage}
+%   \textbf{Project Manager}\\
+%   \vfill{0.5cm}
+%   \textbf{Marta Clementi}\\
+%   \vfill{0.5cm}
+%   ALMA MATER STUDIORUM - UNIVERSIT\`A DI BOLOGNA\\
+%   Research division\\
+%   \vfill{0.5cm}
+%   E-mail: \textcolor{blue}{\href{mailto:marta.clementi3@unibo.it}{marta.clementi3@unibo.it}}
+% \end{minipage}
+
+\subsection*{POLIFONIA Consortium}
+
+\begin{tabular}{|l|l|p{9.5cm}|l|}\hline
+\textbf{No.} & \textbf{Short name} & \textbf{Institution name} & \textbf{Country}\\\hline  
+1 & UNIBO & ALMA MATER STUDIORUM - UNIVERSIT\`A DI BOLOGNA & Italy\\\hline  
+2 & OU & THE OPEN UNIVERSITY & United Kingdom\\\hline  
+3 & KCL & KING'S COLLEGE LONDON & United Kingdom\\\hline  
+4 & NUI GALWAY & NATIONAL UNIVERSITY OF IRELAND GALWAY & Ireland\\\hline  
+5 & MiC & MINISTERIO DELLA CULTURA & Italy\\\hline  
+6 & CNRS & CENTRE NATIONAL DE LA RECHERCHE SCIENTIFIQUE CNRS & France\\\hline  
+  & SORBONNE & SORBONNE UNIVERSITE (LinkedTP) & France\\\hline  
+7 & CNAM & CONSERVATOIRE NATIONAL DES ARTS ET METIERS & France\\\hline  
+8 & NISV & STICHTING NEDERLANDS INSTITUUT VOOR BEELD EN GELUID & Netherlands\\\hline  
+9 & KNAW & KONINKLIJKE NEDERLANDSE AKADEMIE VAN WETENSCHAPPEN & Netherlands\\\hline  
+10 & DP & DIGITAL PATHS & Italy\\\hline  
+\end{tabular}
+
+
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fourth Page 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setlength{\headheight}{1cm}
+% \setlength{\footskip}{18mm}
+% \addtolength{\textheight}{-\footskip}
+\pagestyle{empty}
+
+
+\section*{Project Summary}
+
+European musical heritage is a dynamic historical flow of experiences, leaving heterogeneous traces that are difficult to capture, connect, access, interpret, and valorise. Computing technologies have the potential to shed a light on this wealth of resources by extracting, materialising and linking new knowledge from heterogeneous sources, hence revealing facts and experiences from hidden voices of the past. Polifonia makes this happen by building novel ways of inspecting, representing, and interacting with digital content. Memory institutions, scholars, and citizens will be able to navigate, explore, and discover multiple perspectives and stories about European Musical Heritage.
+
+Polifonia focuses on European Musical Heritage, intended as musical contents and artefacts - or music objects - (tunes, scores, melodies, notations, etc.) along with relevant knowledge about them such as: their links to tangible objects (theatres, conservatoires, churches, etc.), their cultural and historical contexts, opinions and stories told by people having diverse social and artistic roles (scholars, writers, students, intellectuals, musicians, politicians, journalists, etc), and facts expressed in different styles and disciplines (memoire, reportage, news, biographies, reviews), different languages (English, Italian, French, Spanish, and German), and across centuries.
+
+The overall goal of the project is to realise an ecosystem of computational methods and tools supporting discovery, extraction, encoding, interlinking, classification, exploration of, and access to, musical heritage knowledge on the Web. An equally important objective is to demonstrate that these tools improve the state of the art of Social Science and Humanities (SSH) methodologies. Hence their development is guided by, and continuously intertwined with, experiments and validations performed in real-world settings, identified by musical heritage stakeholders (both belonging to the Consortium and external supporters) such as cultural institutes and collection owners, historians of music, anthropologists and ethnomusicologists, linguists, etc.
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fifth Page 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setlength{\headheight}{1cm}
+% \setlength{\footskip}{18mm}
+% \addtolength{\textheight}{-\footskip}
+\pagestyle{empty}
+
+
+\section*{Executive Summary}
+
+\textit{Short summary to clearly explain the objectives and contents of the deliverable (e.g. a brief statement of the problem or proposal covered, background information, concise analysis and main conclusions)}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sixth Page 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setlength{\headheight}{1cm}
+% \setlength{\footskip}{18mm}
+% \addtolength{\textheight}{-\footskip}
+\pagestyle{empty}
+
+
+\section*{Document History}
+
+\begin{tabular}{|l|l|p{9.5cm}|l|}\hline
+  \textbf{Version} & \textbf{Release date} & \textbf{Summary of changes} & \textbf{Author(s) - Institution}\\\hline  
+  V0.1 & 30/04/2021 & First draft released & CNRS-IReMus\\\hline  
+  & & & \\\hline  
+  & & & \\\hline  
+  & & & \\\hline  
+  & & & \\\hline  
+  & & & \\\hline  
+  \end{tabular}
+
+  \clearpage
+
+  % Testing
+
+  % \section*{Test}
+
+  % \blinddocument
+
+  % \clearpage

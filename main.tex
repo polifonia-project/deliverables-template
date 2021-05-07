@@ -1,4 +1,4 @@
-\documentclass{SINet}
+\documentclass{polifonia}
 \usepackage{ifthen}
 \usepackage[printonlyused,nohyperlinks]{acronym}
 \usepackage{units}
@@ -26,15 +26,16 @@
 \newcommand{\e}[1]{\mbox{e}^{#1}}
 \graphicspath{{figures/}}
 
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} 
 
 
 \begin{document}
 
-%% Enter the deliverable information  in this document (tittle.tex)	
+%% Enter the deliverable information  in this document (title.tex)	
 \input{title}
+% \input{test}
 
-
-
+% \pagestyle{empty}
 
 % \oddsidemargin=5mm
 % \evensidemargin=5mm
@@ -44,17 +45,22 @@
 % \textheight=40\baselineskip
 \setcounter{tocdepth}{2}
 
+\renewcommand{\contentsname}{Table of contents}
+
+
+
 \tableofcontents
-\listoffigures
-\begingroup
-\let\clearpage\relax
-\listoftables
-\endgroup
+\clearpage
+% \listoffigures
+% \begingroup
+% \let\clearpage\relax
+% % \listoftables
+% \endgroup
 
 %% SHOULD be included if the deliverable becomes large
-\input{executivesummary}
+% \input{executivesummary}
 
-\input{acronyms}
+% \input{acronyms}
 
 % ------------------------
 % Chapter
@@ -75,23 +81,26 @@
 
 %\cfoot[\pagemark]{}
 
-\lofoot[\footerlogo \hspace{10pt} \footertext]{\footerlogo \hspace{10pt} \footertext}
-\lefoot[\footerlogo \hspace{10pt} \footertext]{\footerlogo \hspace{10pt} \footertext}
+% \lofoot[\footerlogo \hspace{10pt} \footertext]{\footerlogo \hspace{10pt} \footertext}
+% \lefoot[\footerlogo \hspace{10pt} \footertext]{\footerlogo \hspace{10pt} \footertext}
 
-\refoot[\pagemark]{\pagemark}
-\rofoot[\pagemark]{\pagemark}
+% \refoot[\pagemark]{\pagemark}
+% \rofoot[\pagemark]{\pagemark}
 
-\rohead{\rightmark}
-\rehead{\rightmark}
+% \rohead{\rightmark}
+% \rehead{\rightmark}
 
-\lohead{\leftmark}
-\lehead{\leftmark}
+% \lohead{\leftmark}
+% \lehead{\leftmark}
 
+\lohead[\headerlogo \hfill \headertext \\ \hfill \headerversion]{\headerlogo \hfill \headertext \\ \hfill \headerversion}
+% \lehead[\headerlogo \hfill \headertext \\ \hfill \headerversion]{\headerlogo \hfill \headertext \\ \hfill \headerversion}
 
+\cofoot[\pagemark]{\pagemark}
 
 
 \setcounter{page}{1}
-\pagestyle{scrheadings}
+\pagestyle{plain}
 
 \input{chapters/introduction}
 \input{chapters/chapter-XXX}
@@ -99,8 +108,8 @@
 
 \bibliography{bib/references}
 \appendix
-\input{appendix.tex}
-\input{back.tex}
+\input{chapters/appendix-A}
+% \input{back.tex}
 
-%\printbibliography
+% \printbibliography
 \end{document}
